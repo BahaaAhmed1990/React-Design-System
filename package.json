@@ -1,0 +1,15 @@
+{
+  "name": "design-system-react-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd front && npm run dev",
+    "build-story": "cd front && npm run build-storybook",
+    "dev-server": "cd server && npm start",
+    "deploy-story": "cd front && npm run build-storybook && cd .. && cd server && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
