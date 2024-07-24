@@ -1,15 +1,15 @@
-import { useRef } from "react";
-import Heading from "./ui/primitves/Heading";
-
+import { Route, Routes } from "react-router-dom";
+import Mekka from "./ui/pages/Mekka";
+import MekkaSuburb from "./ui/pages/MekkaSuburb";
+import Areem from "./ui/pages/Areem";
 function App() {
-  const headRef = useRef();
-
-  console.log(headRef.current);
   return (
     <>
-      <Heading intent={"primary"} size={"md"} ref={headRef}>
-        <p>lorem</p>
-      </Heading>
+      <Routes>
+        <Route path="/" element={<Mekka />}></Route>
+        <Route path="/mekka-suburb" element={<MekkaSuburb />}></Route>
+        <Route path="/mekka-suburb/areem" element={<Areem />}></Route>
+      </Routes>
     </>
   );
 }
