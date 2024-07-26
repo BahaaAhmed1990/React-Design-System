@@ -1,10 +1,10 @@
 import React from "react";
 import Interface from "./interface";
 
-export default function Layout() {
+export default function Layout({interfaceData}) {
   return (
     <>
-      <Interface />
+      <Interface interfaceData={interfaceData}/>
     </>
   );
 }
