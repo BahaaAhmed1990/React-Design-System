@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd front && npm run dev",
+    "build": "cd front && npm run build && cd .. && cd server && npm start",
     "build-story": "cd front && npm run build-storybook",
     "dev-server": "cd server && npm start",
     "deploy-story": "cd front && npm run build-storybook && cd .. && cd server && npm start"
