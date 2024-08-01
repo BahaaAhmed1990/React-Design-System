@@ -6,15 +6,16 @@ const button = cva(
   {
     variants: {
       intent: {
-        primary: " hover:text-accent transition-all",
-        navBtn: "flex-col-reverse  hover:text-accent transition-all",
-        backBtn: "justify-between hover:text-accent transition-all",
+        primary: " hover:text-accent",
+        navBtn: "flex-col-reverse capitalize hover:text-accent ",
+        backBtn: "justify-between hover:text-accent ",
       },
       size: {
         sm: "text-[14px] rounded-md px-2 py-2",
-        md: ["text-[18px] rounded-md py-2 px-3"],
-        lg: ["text-[18px] rounded-lg py-2 px-2"],
-        xl: ["text-[20px] rounded-lg py-2  px-2"],
+        md: "text-[18px] rounded-md py-2 px-3",
+        lg: "text-[18px] rounded-lg py-2 px-2",
+        xl: "text-[20px] rounded-lg py-2  px-2",
+        full: "text-[18px] rounded-lg w-full",
       },
       active: {
         true: "text-accent",
@@ -30,21 +31,15 @@ export const Button = ({
   icon,
   size,
   label,
+  active = false,
   handleClick,
   ...props
 }) => {
-  const [active, setActive] = useState(false);
-
-  function onHandleClick() {
-    // console.log("from button");
-    handleClick();
-    setActive(!active);
-  }
   return (
     <button
       className={cn(button({ intent, size, active }))}
       {...props}
-      onClick={onHandleClick}
+      onClick={handleClick}
     >
       {icon}
       {label}

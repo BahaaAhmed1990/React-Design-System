@@ -1,8 +1,9 @@
-import {filtersData} from './filters'
-import {menuData} from './menu'
+import { filtersData } from "./filters";
+import { menuData } from "./menu";
 
 const interfaceData = {
-    menuData,filtersData
-}
+  menuData,
+  filtersData,
+};
 
-export  {interfaceData};
+export { interfaceData };

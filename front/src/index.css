@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --clr-brand: #422b75;
+    --clr-accent: #bf9666;
+  }
+}
+
+.theme-dark {
+  --clr-brand: #0f8709;
+  --clr-accent: #bf9666;
+}
+
 body {
   position: fixed;
   overflow: hidden;

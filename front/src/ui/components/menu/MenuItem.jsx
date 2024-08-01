@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import NavLink from "../../primitives/NavLink";
 
 export default function MenuItem({ segement }) {
-  
   return (
     <>
       {segement.children ? (
@@ -14,7 +11,7 @@ export default function MenuItem({ segement }) {
             size="sm"
             icon={segement.icon}
           />
-          <ul className="absolute hidden w-[82px] group-hover:block" >
+          <ul className="absolute hidden w-[82px] group-hover:block">
             {segement.children.map((segmentItem) => (
               <NavLink
                 label={segmentItem.title}

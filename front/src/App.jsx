@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Mekka from "./ui/pages/Mekka";
+import Mekka from "./ui/pages/mekka/Mekka";
 import MekkaSuburb from "./ui/pages/MekkaSuburb";
 import Areem from "./ui/pages/Areem";
 function App() {

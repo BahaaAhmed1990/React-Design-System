@@ -16,10 +16,10 @@ const navLink = cva("text-slate-300 bg-brand cursor-pointer group", {
   },
 });
 
-export default function NavLink({ intent, label, size, icon }) {
+export default function NavLink({ intent, label, size, icon, ...props }) {
   return (
     <>
-      <span className={cn(navLink({ intent, size }))}>
+      <span className={cn(navLink({ intent, size }))} {...props}>
         {label}
         {icon}
       </span>
